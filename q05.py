@@ -3,3 +3,18 @@
 ## de la tabla tbl0
 ## 
 
+# Importamos librerias
+
+import pandas as pd
+
+# Cargar datos
+
+datos = pd.read_csv('tbl0.tsv', sep = '\t')
+
+# Crear solucion al ejercicio
+
+q05 = datos.groupby('_c1')['_c2'].sum()
+
+# Imprimimos en formato necesario
+
+print(q05)
